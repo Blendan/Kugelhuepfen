@@ -10,4 +10,4 @@ Man bewegt einzelne Kugeln über das Spielfeld um andere Kugeln zu eleminiren.
 - man kann Kugeln nur Horizontal und Vertikal bewegen
 
 ### Ziel
-Es sollen so wenig ugeln wie nur möglich übrig bleiben
+Es sollen so wenig Kugeln wie nur möglich übrig bleiben
