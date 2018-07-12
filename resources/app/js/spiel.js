@@ -31,8 +31,6 @@ $(document).ready(
 
             var id = idAuslesen();
 
-
-
             $(this).removeClass("weg");
 
             if(feld[id+2].classList.contains("marked"))
@@ -45,20 +43,24 @@ $(document).ready(
               $(feld[id-1]).addClass("weg");
             }
 
-            if(feld[id+18].classList.contains("marked"))
+            if (!(id+18>80))
             {
-              $(feld[id+9]).addClass("weg");
+              if(feld[id+18].classList.contains("marked"))
+              {
+                $(feld[id+9]).addClass("weg");
+              }
             }
 
-            if(feld[id-18].classList.contains("marked"))
+            if (!(id-18<0))
             {
-              $(feld[id-9]).addClass("weg");
+              if(feld[id-18].classList.contains("marked"))
+              {
+                $(feld[id-9]).addClass("weg");
+              }
             }
 
             $(".marked").addClass("weg");
             $(".marked").removeClass("marked");
-
-            $(".left").removeClass("left");
           }
           $(this).removeClass("clicked");
         }
