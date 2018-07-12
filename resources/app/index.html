@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Solitaer</title>
+    <link rel="stylesheet" href="css/master.css">
+
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/starten.js"></script>
+    <script src="js/spiel.js"></script>
+    <script>if (window.module) module = window.module;</script>
+  </head>
+  <body>
+    <div id="spielfeld"></div>
+    <div id="end"></div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js');
+      const {ipcMain, BrowserWindow, session, dialog} = require('electron')
+      var fs = require('fs');
+    </script>
+  </body>
+</html>
