@@ -1,7 +1,10 @@
+const remote = require('electron').remote;
+
 $(document).ready(
   function() {
     $("#end").click(
       function() {
+        var window = remote.getCurrentWindow();
         window.close();
       }
     );
