@@ -14,64 +14,41 @@ $(document).ready(
       {
         $(this).addClass("clicked");
 
-        var cliked = document.getElementsByClassName('clicked');
-        var feld = document.getElementsByClassName('feld');
-
-        if(!cliked[0].classList.contains("sprungfeld")&&!cliked[0].classList.contains("weg"))
-        {
-          $(".sprungfeld").removeClass("sprungfeld");
-          $(".left").removeClass("left");
-
-          $(".marked").removeClass("marked");
-          sprungFeldermakiren(idAuslesen());
-        }
-        else
-        {
-
-          if (cliked[0].classList.contains("sprungfeld"))
-          {
-            $(".sprungfeld").removeClass("sprungfeld");
-
-            var id = idAuslesen();
-
-            $(this).removeClass("weg");
-
-            if(feld[id+2].classList.contains("marked"))
-            {
-              $(feld[id+1]).addClass("weg");
-            }
-
-            if(feld[id-2].classList.contains("marked"))
-            {
-              $(feld[id-1]).addClass("weg");
-            }
-
-            if (!(id+18>80))
-            {
-              if(feld[id+18].classList.contains("marked"))
-              {
-                $(feld[id+9]).addClass("weg");
-              }
-            }
-
-            if (!(id-18<0))
-            {
-              if(feld[id-18].classList.contains("marked"))
-              {
-                $(feld[id-9]).addClass("weg");
-              }
-            }
-
-            $(".marked").addClass("weg");
-            $(".marked").removeClass("marked");
-          }
-          $(this).removeClass("clicked");
-        }
+        geclickt();
       }
     );
 
   }
 );
+
+function geclickt()
+{
+  var id = idAuslesen();
+  var feld = document.getElementsByClassName('feld');
+
+  if(!feld[id].classList.contains("sprungfeld")&&!feld[id].classList.contains("weg"))
+  {
+    $(".sprungfeld").removeClass("sprungfeld");
+    $(".left").removeClass("left");
+
+    $(".marked").removeClass("marked");
+    sprungFeldermakiren(id);
+  }
+  else
+  {
+    springen(id);
+
+    $(".marked").addClass("weg");
+    $(".marked").removeClass("marked");
+  }
+
+  var ende = ueberpruefeWeiter();
+
+  if (ende)
+  {
+    alert("Keine Züge mehr Möglich");
+  }
+}
 
 function idAuslesen()
 {
@@ -131,4 +108,75 @@ function sprungMoeglich(id,wo)
       return false;
     }
   }
+}
+
+function springen(id)
+{
+  var feld = document.getElementsByClassName('feld');
+
+  if (feld[id].classList.contains("sprungfeld"))
+  {
+    $(".sprungfeld").removeClass("sprungfeld");
+
+    $(feld[id]).removeClass("weg");
+
+    if(feld[id+2].classList.contains("marked"))
+    {
+      $(feld[id+1]).addClass("weg");
+    }
+
+    if(feld[id-2].classList.contains("marked"))
+    {
+      $(feld[id-1]).addClass("weg");
+    }
+
+    if (!(id+18>80))
+    {
+      if(feld[id+18].classList.contains("marked"))
+      {
+        $(feld[id+9]).addClass("weg");
+      }
+    }
+
+    if (!(id-18<0))
+    {
+      if(feld[id-18].classList.contains("marked"))
+      {
+        $(feld[id-9]).addClass("weg");
+      }
+    }
+  }
+}
+
+function ueberpruefeWeiter()
+{
+  var feld = document.getElementsByClassName('feld');
+
+  for (var i = 0; i < feld.length; i++)
+  {
+    if (feld[i].classList.contains("show")&&!feld[i].classList.contains("weg"))
+    {
+      if (sprungMoeglich(i,-1))
+      {
+        return false;
+      }
+
+      if (sprungMoeglich(i,1))
+      {
+        return false;
+      }
+
+      if (sprungMoeglich(i,9))
+      {
+        return false;
+      }
+
+      if (sprungMoeglich(i,-9))
+      {
+        return false;
+      }
+    }
+  }
+
+  return true;
 }
