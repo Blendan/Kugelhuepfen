@@ -29,12 +29,11 @@ function geclickt()
   if(!feld[id].classList.contains("sprungfeld")&&!feld[id].classList.contains("weg"))
   {
     $(".sprungfeld").removeClass("sprungfeld");
-    $(".left").removeClass("left");
 
     $(".marked").removeClass("marked");
     sprungFeldermakiren(id);
   }
-  else
+  else if (feld[id].classList.contains("sprungfeld"))
   {
     springen(id);
 
@@ -122,6 +121,7 @@ function springen(id)
 
     if(feld[id+2].classList.contains("marked"))
     {
+
       $(feld[id+1]).addClass("weg");
     }
 
