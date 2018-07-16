@@ -45,7 +45,7 @@ function geclickt()
 
   if (ende)
   {
-    alert("Keine Züge mehr Möglich");
+    keinzuegeMoeglich();
   }
 }
 
@@ -179,4 +179,12 @@ function ueberpruefeWeiter()
   }
 
   return true;
+}
+
+function keinzuegeMoeglich()
+{
+  $("#keinezuege").animate({left: '-5%'},300);
+  $("#keinezuege").animate({left: '0'},2000);
+  $("#keinezuege").animate({left: '120%'},300);
+  $("#keinezuege").animate({left: '-120%'},0);
 }
