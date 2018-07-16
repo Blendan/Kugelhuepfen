@@ -155,7 +155,11 @@ nav {
   overflow: visible;
   font-size: 20px;
   background: firebrick;
-  border-top: 10px dotted black;
-  border-bottom: 10px dotted black;
+  border-top: 15px dotted black;
+  border-bottom: 15px dotted black;
   text-align: center;
+}
+
+#keinezuege h1 {
+  margin: 10px;
 }
