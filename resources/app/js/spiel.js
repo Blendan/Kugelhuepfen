@@ -183,6 +183,15 @@ function ueberpruefeWeiter()
 
 function keinzuegeMoeglich()
 {
+  var felder = document.getElementsByClassName("show");
+  var weg = document.getElementsByClassName("weg");
+
+  if (felder.length-weg.length==1)
+  {
+    $("#lose").css({display:"none"});
+    $("#win").css({display:"block"});
+  }
+
   $("#keinezuege").animate({left: '-5%'},300);
   $("#keinezuege").animate({left: '0'},2000);
   $("#keinezuege").animate({left: '120%'},300);

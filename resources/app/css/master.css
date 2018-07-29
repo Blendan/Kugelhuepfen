@@ -163,3 +163,11 @@ nav {
 #keinezuege h1 {
   margin: 10px;
 }
+
+#win {
+  display: none;
+}
+
+#lose {
+  display: block;
+}
