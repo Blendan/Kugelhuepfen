@@ -9,7 +9,7 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 600, height: 600, minWidth: 600, minHeight: 600, autoHideMenuBar: true, frame:false,webPreferences: {zoomFactor: 1.0}});
+  mainWindow = new BrowserWindow({width: 600, height: 600, autoHideMenuBar: true, frame:false,webPreferences: {zoomFactor: 1.0}});
 
   //mainWindow.openDevTools();
 

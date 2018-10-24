@@ -15,12 +15,14 @@ function anpassen(win)
 {
   if (win.height() < win.width())
   {
-    $("#spielfeld").css("width",win.height());
-    $("#spielfeld").css("height",win.height());
+    $("#spielfeld").css("width","100vh");
+    $("#spielfeld").css("height","100vh");
+    $("nav").css("height","10vh");
   }
   else
   {
-    $("#spielfeld").css("width",win.width());
-    $("#spielfeld").css("height",win.width());
+    $("#spielfeld").css("width","100vw");
+    $("#spielfeld").css("height","100vw");
+    $("nav").css("height","10vw");
   }
 }

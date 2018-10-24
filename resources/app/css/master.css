@@ -13,7 +13,7 @@ nav {
   top: 0;
   left: 0;
   width: 80%;
-  height: 70px;
+  height: 10vmin;
   margin: 0;
   padding: 0;
   margin-left: 10%;
@@ -31,8 +31,8 @@ nav {
   margin-top: auto;
   margin-bottom: auto;
   overflow: visible;
-  width: 600px;
-  height: 600px;
+  width: 100vmin;
+  height: 100vmin;
   font-size: 0;
 }
 
