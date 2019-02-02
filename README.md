@@ -6,8 +6,10 @@ Ein simples Spiel
 Man bewegt einzelne Kugeln über das Spielfeld um andere Kugeln zu eleminiren.
 
 ### Regeln
-- Man darf eine Kugel nur über eine ander kugel bewegen
-- man kann Kugeln nur Horizontal und Vertikal bewegen
+- Man darf eine Kugel nur über eine ander Kugel bewegen
+- Man kann Kugeln nur Horizontal und Vertikal bewegen
 
 ### Ziel
-Es sollen so wenig Kugeln wie nur möglich übrig bleiben
+Es soll nur eine Kugel üprig Bleibt.
+
+# !!!!Der Pfeil Links Oben ist KEIN Zugrückgängig machen sonder ein neues Speil Button!!!!
