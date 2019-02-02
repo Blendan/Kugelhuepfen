@@ -6,6 +6,7 @@ html, body {
   overflow: hidden;
   z-index: 1;
   background: none;
+  background: rgb(64, 64, 64);
 }
 
 nav {
@@ -21,7 +22,7 @@ nav {
   background: none;
   -webkit-app-region:drag;
   cursor: move;
-  background: rgba(217, 217, 217, 0.2);
+  background: rgba(26, 26, 26, 0.2);
   transition: all 0.3s;
 }
 
@@ -43,13 +44,9 @@ nav {
   margin: 0;
 }
 
-#spielfeld:hover .show {
-  box-shadow: 20px 20px 0 2px rgb(200, 200, 200);
-}
-
 .show {
   background: rgb(147, 147, 147);
-  box-shadow: 10px 10px 0 2px rgb(200, 200, 200);
+  box-shadow: 10px 10px 0 2px rgba(0, 0, 0, 0.8);
   transition: all 0.3s;
   margin: 0;
   padding: 0;
@@ -106,8 +103,8 @@ nav {
   position: fixed;
   right: 5px;
   top: 10px;
-  width: 50px;
-  height: 50px;
+  width: 8vmin;
+  height: 8vmin;
   background-image: url("../bilder/exit.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,8 +116,8 @@ nav {
   position: fixed;
   left: 5px;
   top: 10px;
-  width: 50px;
-  height: 50px;
+  width: 8vmin;
+  height: 8vmin;
   background-image: url("../bilder/relod.png");
   background-repeat: no-repeat;
   background-size: cover;
