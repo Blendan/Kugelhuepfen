@@ -5,7 +5,6 @@ html, body {
   padding: 0;
   overflow: hidden;
   z-index: 1;
-  background: none;
   background: rgb(64, 64, 64);
 }
 
